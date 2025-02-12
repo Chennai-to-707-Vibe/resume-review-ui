@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #282c34;
+    color: white;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.logout-btn {
+    padding: 5px 15px;
+    width: fit-content;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Pushes it to the right */
+    margin-top: 0;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+/* Login Box */
+.container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+.error-message {
+    color: red;
+    background: #ffe6e6;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
