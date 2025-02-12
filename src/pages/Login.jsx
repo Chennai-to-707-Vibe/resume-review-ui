@@ -25,7 +25,7 @@ const Login = ({ setAuth }) => {
 
       if (response.ok && data.token) {
         login(data.token); // Store token
-        setAuth(true);
+        setAuth(false);
         navigate("/"); // Redirect to Home
       } else {
         setError("Invalid credentials. Please try again."); // 🔥 Set error message
