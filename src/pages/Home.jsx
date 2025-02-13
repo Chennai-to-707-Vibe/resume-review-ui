@@ -3,11 +3,16 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { isAuthenticated } from "../utils/auth";
 
-const Home = () => {
+const Home = ({setAuth}) => {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
 	const [file, setFile] = useState(null);
 	const navigate = useNavigate();
+	
+	const handleLogout = () => {
+		localStorage.removeItem("authToken");
+		setAuth(false);
+	  };
 
 	const handleFileChange = (e) => {
 		setFile(e.target.files[0]);
@@ -15,6 +20,7 @@ const Home = () => {
 
 	useEffect(() => {
 		if (!isAuthenticated()) {
+			console.log("Logging in after auth")
 			navigate("/login");
 		}
 	}, [navigate]);
